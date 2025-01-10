@@ -2,7 +2,6 @@ const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
 const cors = require("cors");
 
-app.use(cors()); // Enable CORS for all routes
 
 const app = express();
 const port = 3000;
@@ -12,6 +11,7 @@ const uri = "mongodb+srv://test:test123@cluster0.ozfc5.mongodb.net/?retryWrites=
 const dbName = "codinggita";
 
 // Middleware
+app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
 let db, students;
 
