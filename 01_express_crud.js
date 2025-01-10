@@ -1,5 +1,8 @@
 const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
+const cors = require("cors");
+
+app.use(cors()); // Enable CORS for all routes
 
 const app = express();
 const port = 3000;
